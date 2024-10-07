@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-Validation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-featur">
+          <div class="modal-circle"></div>
+
+          <img src="img.png" class="modal-product" />
+        </div>
+
+        <div class="content">
+          <h2>Customers Basic Details</h2>
+
+          <form class="form">
+            <li class="form-row">
+              <label>Name</label>
+              <input type="text" name="name" pattern=".{1,40}" required placeholder="" />
+              <span class="error" id="emailError">Name must be < 40</span>
+            </li>
+            <li class="form-row">
+              <label>email</label>
+              <input type="email" name="email" required placeholder=""/>
+              <span class="error" id="emailError">Entered Valid Email</span>
+            </li>
+            <li class="form-row">
+              <label>phone</label>
+              <input type="tel" pattern="[0-9]{10}" required placeholder=""/>
+              <span class="error" id="phoneError">Number must be exactly 10 digits</span>
+            </li>
+
+            <li class="form-row-gender gender-par">
+              <div class="form-row-gender1">
+                <label>male</label>
+                <input type="radio" name="gender" required />
+              </div>
+              <div class="form-row-gender1">
+                <label>Female</label>
+                <input type="radio" name="gender" required />
+              </div>
+            </li>
+
+            <li>
+              <label class="form-row_list">
+                <input
+                  type="checkbox"
+                  name="save_cc"
+                  checked="checked"
+                  required
+                />
+                save my detail for future
+              </label>
+            </li>
+
+            <li>
+              <button type="submit" class="button">Save now</button>
+            </li>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
